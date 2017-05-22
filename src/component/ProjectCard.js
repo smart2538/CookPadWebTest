@@ -61,7 +61,7 @@ export default class ProjectCard extends Component {
       </Button> : "";
     const CommentForm = user ? 
       <Form loading={loading} onSubmit={this.onEnterComment}>
-            <Form.Input action={<Button icon circular icon="send" />} transparent fluid placeholder='comment here...'
+            <Form.Input action={<Button icon circular icon="send" primary/>} transparent fluid placeholder='comment here...'
                name="comment" onChange={this.handleChange} />
           </Form> : "";
     return (
@@ -75,7 +75,7 @@ export default class ProjectCard extends Component {
             {deleteButton}
           </Card.Meta>
         </Card.Content>
-        <Image id="image" src={post.imageUrl} />
+        <Image id="image" style={{maxHeight: '1000px'}} fluid src={post.imageUrl} />
         <Card.Content extra>
           <Card.Description>
             {post.caption}

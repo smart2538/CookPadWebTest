@@ -55,8 +55,8 @@ export default class NavBar extends Component {
             Feeds
           </Menu.Item>          
           {user ? <Menu.Item disabled={!user}
-              name='Home'
-              active={page === 'Home'}
+              name='your image'
+              active={page === 'your image'}
               onClick={handleItemClick}
             >
             Home

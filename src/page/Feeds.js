@@ -33,7 +33,7 @@ export default class Feeds extends Component {
   render() {
     let { posts, user } = this.state;
     const { page } = this.props;
-    if(page === "Home" && user){
+    if(page !== "Feeds" && user){
         posts = posts.filter(post => post.author === user.email);
     }
     return (
